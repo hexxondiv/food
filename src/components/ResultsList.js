@@ -11,7 +11,7 @@ import ResultsDetail from "./ResultsDetail";
 import { withNavigation } from "react-navigation";
 
 const ResultsList = ({ title, results, navigation }) => {
-  return (
+  return !results.length ? null : (
     <View style={styles.container}>
       <Text style={styles.titleStyle}>{title}</Text>
       <FlatList
